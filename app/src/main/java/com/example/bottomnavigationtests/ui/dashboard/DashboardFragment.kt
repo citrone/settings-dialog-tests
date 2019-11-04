@@ -5,10 +5,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import com.example.bottomnavigationtests.R
+import com.example.bottomnavigationtests.databinding.FragmentDashboardBinding
 
 class DashboardFragment : Fragment() {
 
@@ -21,11 +23,9 @@ class DashboardFragment : Fragment() {
     ): View? {
         dashboardViewModel =
             ViewModelProviders.of(this).get(DashboardViewModel::class.java)
-        val root = inflater.inflate(R.layout.fragment_dashboard, container, false)
-        val textView: TextView = root.findViewById(R.id.text_dashboard)
-        dashboardViewModel.text.observe(this, Observer {
-            textView.text = it
-        })
-        return root
+        val binding: FragmentDashboardBinding = DataBindingUtil.inflate(
+            inflater, R.layout.fragment_dashboard, container, false)
+        binding.dashboardViewModel = dashboardViewModel
+        return binding.root
     }
 }
