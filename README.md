@@ -1,22 +1,15 @@
-# Bottom Navigation Tests
+# Settings Dialog Tests
 
 This project is part of the Chuck Noris Jokes.
 
-I started this project to play arround with bottom navigation. I want to become familliar with how bottom navigation works.
+I started this project to play arround with setting dialogs.
 
 ## How final application will look like
 
-I want to have an application with two panes in the bottom navigation. One should be used to display all jokes, and the other one to
-display jokes filtered on categories.
+This sample project is based on Bottom Navigation Tests. As a matter of fact I cloned Bottom Navigation Tests project and use it as a base fro this one.
 
-The app should have a menu in the `AppBar` which will be different on each of the two panes. The `All` pane will have only a `Settings`
-menu, while the `Categories` pane will have a 'Settings' and a `Categories` menu.
-
-Clicking on the `Settings` menu will show a toast indicating that the respective menu was clicked.
-
-Clicking on the `Categories` menu will show a popup menu with two options. Clicking on an option will change the message in the activity's
-main window.
+When the user clicks on the `Settings` button in the `AppBar`, I want to display a popup dialog with an edit box and a radio button with two options. What the user enters or selects here will be transimtted to the app as settings.
 
 ## Documentation
 
-All process is documented in the [wiki](https://github.com/citrone/bottom-navigation-tests/wiki)
+All process is documented in the [wiki](https://github.com/citrone/settings-dialog-tests/wiki)
